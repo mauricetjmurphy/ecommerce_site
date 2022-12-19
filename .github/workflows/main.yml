@@ -27,13 +27,18 @@ jobs:
           yarn install
 
       - name: Run the tests and generate coverage report
-        run: yarn test
+        run: |
+          cd ./frontend
+          yarn test
 
       - name: Build
-        run: yarn build
+        run: |
+          cd ./frontend
+          yarn build
 
       - name: Deploy
         run: |
+          cd ./frontend
           aws s3 sync --delete build/ s3://${{ secrets.AWS_S3_BUCKET }}
           aws cloudfront create-invalidation --distribution-id "E3Q3YRXFR8EJMQ" --paths "/*"
         env:
