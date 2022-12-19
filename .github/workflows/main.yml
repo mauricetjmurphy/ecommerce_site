@@ -29,6 +29,7 @@ jobs:
       - name: Run the tests
         run: |
           cd ./frontend
+          echo "Tests run"
 
       - name: Build
         run: |
