@@ -1,4 +1,5 @@
 import axios from "axios";
+
 import { UserResponse } from "../types";
 
 type RegisterData = {
