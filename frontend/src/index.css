@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
+  width: 40px !important;
+  height: 2px !important;
+  border-radius: 0px !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #ceccc8 !important;
+  width: 40px !important;
+  height: 3px !important;
+  border-radius: 0px !important;
+}
+
+.swiper-pagination {
+  margin-bottom: 20px;
+  z-index: 800;
+}
