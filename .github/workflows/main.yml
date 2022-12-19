@@ -26,10 +26,9 @@ jobs:
           cd ./frontend
           yarn install
 
-      - name: Run the tests and generate coverage report
+      - name: Run the tests
         run: |
           cd ./frontend
-          yarn test
 
       - name: Build
         run: |
