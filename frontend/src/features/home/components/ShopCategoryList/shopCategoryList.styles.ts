@@ -1,6 +1,21 @@
 export const shopCategoryListStyles = {
-  grid: { justifyContent: "center", height: "400px", margin: "20px 0" },
-  gridItem: {},
+  grid: {
+    padding: "30px",
+    justifyContent: "center",
+  },
+  gridItem: { margin: "0 20px" },
+  gridImageContainer: {
+    position: "relative",
+    textAlign: "center",
+    width: "100%",
+  },
   gridImage: { width: "100%" },
-  title: { position: "absolute", top: "0", zIndex: "10" },
+  title: {
+    position: "absolute",
+    top: "50%",
+    left: " 50%",
+    transform: "translate(-50%, -50%)",
+    color: "#fff",
+    fontSize: "24px",
+  },
 };
