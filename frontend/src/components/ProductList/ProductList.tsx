@@ -85,7 +85,7 @@ export const ProductList = ({
                 key={nanoid()}
                 item
                 xs={12}
-                sm={4}
+                sm={6}
                 md={6}
                 lg={3}
               >

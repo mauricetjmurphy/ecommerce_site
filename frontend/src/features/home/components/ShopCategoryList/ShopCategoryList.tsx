@@ -13,27 +13,28 @@ type ShopCategoryListProps = {
 
 export const ShopCategoryList = ({ categories }: ShopCategoryListProps) => {
   return (
-    <Grid sx={shopCategoryListStyles.grid} container spacing={3}>
+    <Grid sx={shopCategoryListStyles.grid} style={{ width: "100vw" }} container>
       {categories.map((item) => {
         return (
           <Grid
-            style={shopCategoryListStyles.gridItem}
+            sx={shopCategoryListStyles.gridItem}
             key={nanoid()}
             item
             xs={12}
-            sm={4}
-            md={6}
+            sm={3}
+            md={3}
             lg={3}
           >
-            <img
-              style={shopCategoryListStyles.gridImage}
-              src={item.image}
-              alt=""
-            />
-
-            <Typography sx={shopCategoryListStyles.title}>
-              {item.title}
-            </Typography>
+            <Box sx={shopCategoryListStyles.gridImageContainer}>
+              <img
+                style={shopCategoryListStyles.gridImage}
+                src={item.image}
+                alt=""
+              />
+              <Typography sx={shopCategoryListStyles.title}>
+                {item.title}
+              </Typography>
+            </Box>
           </Grid>
         );
       })}

@@ -1,32 +1,34 @@
 variable "aws_region" {
       type = string
+       default = "us-east-1"
 }
 
 variable "vpc_id" {
       type = string
 }
 
-variable "secgroupname" {
+variable "sec_group_name" {
       type = string
 }
 
 variable "instance_name" {
+        type = string
         description = "Name of the instance to be created"
-        default = "awsbuilder-demo"
 }
 
 variable "instance_type" {
-        default = "t2.micro"
+        type = string
+        description = "Te instance type to be created"
 }
 
 variable "subnet_id" {
+        type = string
         description = "The VPC subnet the instance(s) will be created in"
-        default = "subnet-0a1189c095ff9b4dc"
 }
 
 variable "ami_id" {
+        type = string
         description = "The AMI to use"
-        default = "ami-09d56f8956ab235b3"
 }
 
 variable "number_of_instances" {
